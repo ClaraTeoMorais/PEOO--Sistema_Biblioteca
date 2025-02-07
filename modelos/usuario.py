@@ -1,6 +1,5 @@
-import Json
-from modelos.crud import CRUD
-
+import json
+from crud import CRUD
 
 # MODELO
 
@@ -14,14 +13,14 @@ class Usuario:
     # GETs E SETs
 
     def set_id(self, g):
-        return self.__id = g
+        self.__id = g
     
     def get_id(self):
         return self.__id
 
     def set_nome(self, g):
         if g != "": 
-            return self.__nome = g
+            self.__nome = g
         else: 
             raise ValueError("O nome do usuário não pode ser vazio")
     
@@ -30,7 +29,7 @@ class Usuario:
 
     def set_email(self, g):
         if g != "": 
-            return self.__email = g
+            self.__email = g
         else: 
             raise ValueError("Digite um email")
     
@@ -39,7 +38,7 @@ class Usuario:
 
     def set_senha(self, g):
         if g != "": 
-            return self.__senha = g
+            self.__senha = g
         else: 
             raise ValueError("Digite uma senha")
     
@@ -47,7 +46,7 @@ class Usuario:
         return self.__senha
 
     # str
-
+    
     def __str__(self):
         print (f"Gênero: {self.__nome}")
 
@@ -58,22 +57,24 @@ class Usuarios(CRUD):
     def atualizar(self, obj):
         g = self.listar_id(obj.id)
         if g:
-        g.nome = obj.nome
-        g.email = obj.email
-        g.senha = obj.senha
-        self.salvar()
+            g.nome = obj.nome
+            g.email = obj.email
+            g.senha = obj.senha
+            self.salvar()
     
     def salvar(self):
         with open("usuarios.json", mode="w") as arquivo:
-        json.dump(self.objetos, arquivo, default = vars)
+            json.dump(self.objetos, arquivo, default = vars)
     
     def abrir(self):
         self.objetos = []
         try:
-        with open("usuarios.json", mode="r") as arquivo:   # r - read
-            texto = json.load(arquivo)
-            for obj in texto:   
-            g = Usuario(obj["__id"], obj["__nome"], obj["__email"], obj["__senha"])
-            self.objetos.append(g)
+                with open("usuarios.json", mode="r") as arquivo:   # r - read
+                    texto = json.load(arquivo)
+                    for obj in texto:   
+                        g = Usuario(obj["__id"], obj["__nome"], obj["__email"], obj["__senha"])
+                        self.objetos.append(g)
         except FileNotFoundError:
-        pass
+            pass
+
+Usuarios.salvar()

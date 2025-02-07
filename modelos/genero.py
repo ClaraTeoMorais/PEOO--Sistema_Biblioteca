@@ -1,6 +1,5 @@
-import Json
-from modelos.crud import CRUD
-
+import json
+from crud import CRUD
 
 # MODELO
 
@@ -12,14 +11,14 @@ class Genero:
   # GETs E SETs
 
   def set_id(self, g):
-    return self.__id = g
+     self.__id = g
     
   def get_id(self):
     return self.__id
 
   def set_genero(self, g):
     if g != "": 
-      return self.__genero = g
+       self.__genero = g
     else: 
       raise ValueError("O nome do gênero não pode ser vazio")
     
@@ -53,3 +52,9 @@ class Generos(CRUD):
           self.objetos.append(g)
     except FileNotFoundError:
       pass
+
+# Criando uma instância de Generos
+generos = Generos()
+
+# Agora você pode chamar o método salvar() na instância criada
+generos.salvar()
