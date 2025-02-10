@@ -1,0 +1,170 @@
+[
+    {
+        "id": 2,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:10",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 3,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:11",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 4,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:11",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 5,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:11",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 6,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:11",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 7,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:11",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 8,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:13",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 9,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:15",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 10,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:15",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 11,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:15",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 12,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:15",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 13,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:16",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 14,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:17",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 15,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:17",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 16,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:19",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 17,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:21",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 18,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:21",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 19,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:29",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 20,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:30",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 21,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:31",
+        "data_devolucao": "17/02/2025 12:00"
+    },
+    {
+        "id": 22,
+        "idLivro": "O Di\u00e1rio de Anne Frank",
+        "idUsuario": "Bella Morais",
+        "reserva": true,
+        "data_emprestimo": "10/02/2025 08:33",
+        "data_devolucao": "17/02/2025 12:00"
+    }
+]
