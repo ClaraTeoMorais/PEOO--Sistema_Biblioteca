@@ -55,9 +55,3 @@ class Generos(CRUD):
           cls.objetos.append(g)
     except FileNotFoundError:
       pass
-
-# Criando uma instância de Generos
-# generos = Generos()
-
-# Agora você pode chamar o método salvar() na instância criada
-# generos.salvar()

@@ -10,8 +10,8 @@ from datetime import datetime
 a = Emprestimo(1, "O Mulato", "Clara", True,  datetime.now(), datetime.strptime("17/02/2025 12:00", "%d/%m/%Y %H:%M"))
 Emprestimos.inserir(a)
 
-# b = Emprestimo(1, "O Diário de Anne Frank", "Bella Morais", "10/02")
-# Emprestimos.atualizar(b)
+#b = Emprestimo(1, "O Diário de Anne Frank", "Bella Morais", True, datetime.now(), datetime.strptime("18/02/2025 12:00", "%d/%m/%Y %H:%M"))
+#Emprestimos.atualizar(b)
 
 # c = Emprestimo(1, "", "", "")
 # Emprestimos.excluir(c)
