@@ -7,59 +7,59 @@ from datetime import datetime
 
 # EMPRÉSTIMO
 
-a = Emprestimo(1, "O Mulato", "Clara", True,  datetime.now(), datetime.strptime("17/02/2025 12:00", "%d/%m/%Y %H:%M"))
+a = Emprestimo(1, "PJ", "Amanda", True, datetime.now(), datetime.strptime("20/02/2025 12:00", "%d/%m/%Y %H:%M"))
 Emprestimos.inserir(a)
 
-#b = Emprestimo(1, "O Diário de Anne Frank", "Bella Morais", True, datetime.now(), datetime.strptime("18/02/2025 12:00", "%d/%m/%Y %H:%M"))
-#Emprestimos.atualizar(b)
+# b = Emprestimo(1, "O Diário de Anne Frank", "Bella Morais", True, datetime.now(), datetime.strptime("18/02/2025 12:00", "%d/%m/%Y %H:%M"))
+# Emprestimos.atualizar(b)
 
-# c = Emprestimo(1, "", "", "")
+# c = Emprestimo(2, "", "", True, datetime.now(), datetime.now())
 # Emprestimos.excluir(c)
 
 for i in Emprestimos.listar():
-   print(i)
+  print(i)
 
 
 # GÊNERO
 
-#d = Genero(1, "Aventura")
-#Generos.inserir(d)
+# d = Genero(1, "Suspense")
+# Generos.inserir(d)
 
-#e = Genero(1, "Mistério")
-#Generos.atualizar(e)
+# e = Genero(1, "Mistério")
+# Generos.atualizar(e)
 
-#f = Genero(1, "")
-#Generos.excluir(f)
+# f = Genero(1, "")
+# Generos.excluir(f)
 
-#for i in Generos.listar():
-  #  print(i)
+# for i in Generos.listar():
+#   print(i)
 
 
 # LIVRO
 
-# g = Livro(1, "Pj", "Rick", "fanatasia", "Intriseca", "2025", "5", "5")
+# g = Livro(1, "Harry Potter", "JK", "fanatasia", "Intriseca", "2025", "5", "5")
 # Livros.inserir(g)
 
-# h = Livro(2, "O Mulato", "Aluísio Azevedo", "Ficção", "Maranhão", "2025", "10", "10")
+# h = Livro(1, "O Mulato", "Aluísio Azevedo", "Ficção", "Maranhão", "2025", "10", "10")
 # Livros.atualizar(h)
 
 # j = Livro(1, "", "", "", "", "", "", "")
 # Livros.excluir(j)
 
 # for i in Livros.listar():
-#     print(i)
+#   print(i)
 
 
 # USUÁRIO
 
-# k = Usuario(1, "Bella", "clbellaara@gmail.com", "123")
+# k = Usuario(1, "Amanda", "amandaa@gmail.com", "123")
 # Usuarios.inserir(k)
 
-# l = Usuario(1, "Clara Teodósio", "clara.teodosio@gmail.com", "123")
+# l = Usuario(2, "Clara Teodósio", "clara.teodosio@gmail.com", "123")
 # Usuarios.atualizar(l)
 
-# m = Usuario(2, "", "", "")
+# m = Usuario(1, "", "", "")
 # Usuarios.excluir(m)
 
 # for i in Usuarios.listar():
-#     print(i)
+#   print(i)
