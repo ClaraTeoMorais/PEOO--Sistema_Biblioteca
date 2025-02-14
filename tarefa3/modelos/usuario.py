@@ -1,5 +1,5 @@
 import json
-from crud import CRUD
+from .crud import CRUD
 
 # MODELO
 

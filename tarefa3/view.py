@@ -1,19 +1,20 @@
-from modelos.emprestimo import Emprestimo, Emprestimos
-from modelos.genero import Genero, Generos
-from modelos.livro import Livro, Livros
+# from modelos.emprestimo import Emprestimo, Emprestimos
+# from modelos.genero import Genero, Generos
+# from modelos.livro import Livro, Livros
 from modelos.usuario import Usuario, Usuarios
-from datetime import datetime, timedelta
+# from datetime import datetime, timedelta
 
 class View:
-    def usuario_admin():
+    def usuario_admin():  # cria o usuário admin
         for u in View.usuario_listar():
-            if u.email == "admin": 
-                return View.usuario_inserir("admin", "admin", "1234")
+            if u.get_email() == "admin": 
+                return 
+        View.usuario_inserir("Admin", "admin", "1234")
 
     def usuario_autenticar(email, senha):
         for u in View.usuario_listar():
-            if u.email == email and u.senha == senha:
-                return {"id" : u.id, "nome" : u.nome}
+            if u.get_email() == email and u.get_senha() == senha:
+                return {"id" : u.get_id(), "nome" : u.get_nome()}
         return None
 
 
