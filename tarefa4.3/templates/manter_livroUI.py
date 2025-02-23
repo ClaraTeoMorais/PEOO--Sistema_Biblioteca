@@ -45,7 +45,7 @@ class Manter_Livro_UI:
         editora = st.text_input("Informe a editora do livro")
         ano = st.text_input("Informe o ano que o livro foi publicado")
         quantidade = (st.text_input("Informe o quantidade de livros"))
-        quantDisponivel = (st.text_input("Informe o quantidade de livros disponíveis"))
+        quantDisponivel = (st.text_input("Informe o quantidade de livros disponíveis")) #Erro com o gets encapsulado(resolver)
 
         if st.button("Inserir"):
 
@@ -69,9 +69,19 @@ class Manter_Livro_UI:
             st.write("Nenhum livro cadastrado")
         else:
             op = st.selectbox("Atualização de livro", livros)
+            generos = View.genero_listar()
             livro = st.text_input("Informe o novo nome do livro", op.get_livro())
+            autor = st.text_input("Informe o novo autor do livro", op.get_autor())
+            genero = st.selectbox("Informe o novo gênero do livro", generos, index = None)
+            editora = st.text_input("Informe a nova editora do livro", op.get_editora())
+            ano = st.text_input("Informe o novo ano que o livro foi publicado", op.get_ano())
+            quantidade = (st.text_input("Informe a nova quantidade de livros", op.get_quantidade()))
+            quantDisponivel = (st.text_input("Informe a nova quantidade de livros disponíveis"))
+
             if st.button("Atualizar"):
-                View.livro_atualizar(op.get_id(), livro)
+                id_Genero = None
+                if genero != None: id_Genero = genero.get_id()
+                View.livro_atualizar(op.get_id(), livro, autor, id_Genero, editora, ano, quantidade, quantDisponivel)
                 st.success("livro atualizado com sucesso")
                 time.sleep(2)
                 st.rerun()
@@ -86,4 +96,4 @@ class Manter_Livro_UI:
                 View.livro_excluir(op.get_id())
                 st.success("livro excluído com sucesso")
                 time.sleep(2)
-                st.rerun()    
+                st.rerun()    #Erro no excluir

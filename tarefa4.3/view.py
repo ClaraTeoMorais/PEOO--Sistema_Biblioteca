@@ -43,7 +43,7 @@ class View:
 
     def emprestimo_inserir(idLivro, idUsuario, reserva, data_emprestimo, data_devolucao):
         data_emprestimo = datetime.now()
-        data_devolucao = data_emprestimo + timedelta(days=14)
+        data_devolucao = data_emprestimo + timedelta(days=7)
 
         u = Emprestimo(0, idLivro, idUsuario, reserva, data_emprestimo, data_devolucao)
         Emprestimos.inserir(u)

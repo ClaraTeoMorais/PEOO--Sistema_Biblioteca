@@ -1,9 +1,9 @@
-# from templates.manter_emprestimoUI import Manter_Emprestimo_UI
+from templates.manter_emprestimoUI import Manter_Emprestimo_UI
 from templates.manter_generoUI import Manter_Genero_UI
 from templates.manter_livroUI import Manter_Livro_UI
 from templates.manter_usuarioUI import Manter_Usuario_UI
 # from templates.reserva_livroUI import Reservas_UI
-# from templates.livro_disponivelUI import Livros_Disponiveis_UI
+from templates.livro_disponivelUI import Livros_Disponiveis_UI
 # from templates.solicitar_emprestimoUI import Solicitar_Emprestimo_UI
 # from templates.grafico_livrosUI import Livros_pelo_Genero_UI
 from templates.criar_contaUI import Criar_ContaUI
@@ -25,12 +25,12 @@ class IndexUI:
         if op == "Cadastro de Gêneros": Manter_Genero_UI.main()
         if op == "Cadastro de Livros": Manter_Livro_UI.main()
         if op == "Cadastro de Usuários": Manter_Usuario_UI.main()
-        # if op == "Realizar Empréstimo": Manter_Emprestimo_UI.main()
+        if op == "Realizar Empréstimo": Manter_Emprestimo_UI.main()
         # if op == "Visualizar Reservas": Reservas_UI.main()
 
     def menu_usuario():
         op = st.sidebar.selectbox("Menu", ["Livros Disponíveis", "Solicitar Empréstimo", "Gráfico de livros pelo gênero"])
-        # if op == "Livros Disponíveis": Livros_Disponiveis_UI.main()
+        if op == "Livros Disponíveis": Livros_Disponiveis_UI.main()
         # if op == "Solicitar Empréstimo": Solicitar_Emprestimo_UI.main()
         # if op == "Gráfico de livros pelo gênero": Livros_pelo_Genero_UI.main()
 
