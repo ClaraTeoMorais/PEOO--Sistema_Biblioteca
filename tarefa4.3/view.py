@@ -41,11 +41,11 @@ class View:
 
     # EMPRÉSTIMO 
 
-    def emprestimo_inserir(idLivro, idUsuario, reserva, data_emprestimo, data_devolucao):
+    def emprestimo_inserir(id_Livro, idUsuario, reserva, data_emprestimo, data_devolucao):
         data_emprestimo = datetime.now()
         data_devolucao = data_emprestimo + timedelta(days=7)
 
-        u = Emprestimo(0, idLivro, idUsuario, reserva, data_emprestimo, data_devolucao)
+        u = Emprestimo(0, id_Livro, idUsuario, reserva, data_emprestimo, data_devolucao)
         Emprestimos.inserir(u)
 
     def emprestimo_listar():

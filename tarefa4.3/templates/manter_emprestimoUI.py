@@ -22,7 +22,7 @@ class Manter_Emprestimo_UI:
 
         dados = []
         for obj in emprestimos:
-            livro_obj = Livros.listar_id(obj.get_id_livro())
+            livro_obj = Livros.listar_id(obj.get_idLivro())
             nome_livro = livro_obj.get_livro() if livro_obj else "Livro não encontrado"
             dados.append({
                 "ID": obj.get_id(),
@@ -77,7 +77,7 @@ class Manter_Emprestimo_UI:
             st.write("Nenhum empréstimo cadastrado")
             return
 
-        op = st.selectbox("Selecione o empréstimo para atualizar", emprestimos, format_func=lambda x: f"{x.get_id()} - {x.get_id_livro()} - {x.get_idUsuario()}" )
+        op = st.selectbox("Selecione o empréstimo para atualizar", emprestimos, format_func=lambda x: f"{x.get_id()} - {x.get_idLivro()} - {x.get_idUsuario()}" )
         nova_data_devolucao = st.date_input("Nova data de devolução", datetime.today() + timedelta(days=7))
 
         if st.button("Atualizar"):
@@ -95,7 +95,7 @@ class Manter_Emprestimo_UI:
             st.write("Nenhum empréstimo cadastrado")
             return
 
-        op = st.selectbox("Selecione o empréstimo para excluir", emprestimos, format_func=lambda x: f"{x.get_id()} - {x.get_id_livro()} - {x.get_idUsuario()}" )
+        op = st.selectbox("Selecione o empréstimo para excluir", emprestimos, format_func=lambda x: f"{x.get_id()} - {x.get_idLivro()} - {x.get_idUsuario()}" )
 
         if st.button("Excluir"):
             try:
