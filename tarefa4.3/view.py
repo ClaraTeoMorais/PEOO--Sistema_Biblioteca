@@ -55,12 +55,21 @@ class View:
         return Emprestimos.listar_id(id)    
 
     def emprestimo_atualizar(id, idLivro, idUsuario, reserva, data_emprestimo, data_devolucao):
+        if isinstance(data_emprestimo, str):  
+            data_emprestimo = datetime.strptime(data_emprestimo, "%d/%m/%Y %H:%M")
+        if isinstance(data_devolucao, str):
+            data_devolucao = datetime.strptime(data_devolucao, "%d/%m/%Y %H:%M")
+
         u = Emprestimo(id, idLivro, idUsuario, reserva, data_emprestimo, data_devolucao)
         Emprestimos.atualizar(u)
 
     def emprestimo_excluir(id):
-        u = Emprestimo(id, "", "", "", "", "")
-        Emprestimos.excluir(u)    
+        emprestimo = Emprestimos.listar_id(id)
+        if not emprestimo:
+            raise ValueError("Empréstimo não encontrado")
+
+        Emprestimos.excluir(emprestimo)
+
 
 
     # GÊNERO 

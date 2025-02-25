@@ -78,16 +78,26 @@ class Manter_Emprestimo_UI:
             return
 
         op = st.selectbox("Selecione o empréstimo para atualizar", emprestimos, format_func=lambda x: f"{x.get_id()} - {x.get_idLivro()} - {x.get_idUsuario()}" )
-        nova_data_devolucao = st.date_input("Nova data de devolução", datetime.today() + timedelta(days=7))
+
+        nova_data_devolucao = datetime.combine(st.date_input("Nova data de devolução", datetime.today() + timedelta(days=7)), datetime.min.time())
+        #O combine serve para adicionar um horário
 
         if st.button("Atualizar"):
             try:
-                View.emprestimo_atualizar(op.get_id(), nova_data_devolucao.strftime('%Y-%m-%d'))
+                View.emprestimo_atualizar(
+                    op.get_id(),
+                    op.get_idLivro(),
+                    op.get_idUsuario(),
+                    op.get_reserva(),
+                    op.get_data_emprestimo(),
+                    nova_data_devolucao.strftime('%d/%m/%Y %H:%M')
+                )
                 st.success("Empréstimo atualizado com sucesso")
                 time.sleep(2)
                 st.rerun()
             except Exception as e:
                 st.error(f"Erro ao atualizar empréstimo: {e}")
+
 
     def excluir():
         emprestimos = View.emprestimo_listar()

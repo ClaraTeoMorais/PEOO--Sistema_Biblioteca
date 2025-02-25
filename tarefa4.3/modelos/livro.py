@@ -11,8 +11,9 @@ class Livro:
         self.__idGenero = idGenero
         self.__editora = editora
         self.__ano = ano
-        self.__quantidade = int(quantidade)
-        self.__quantDisponivel = int(quantDisponivel)
+        self.__quantidade = int(quantidade) if str(quantidade).isdigit() else 0
+        self.__quantDisponivel = int(quantDisponivel) if str(quantDisponivel).isdigit() else 0
+
 
     # GETs E SETs
     #Lembrar de ver como colocar o id genero
