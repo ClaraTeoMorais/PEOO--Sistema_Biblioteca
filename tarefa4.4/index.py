@@ -4,7 +4,7 @@ from templates.manter_livroUI import Manter_Livro_UI
 from templates.manter_usuarioUI import Manter_Usuario_UI
 from templates.livro_disponivelUI import Livros_Disponiveis_UI
 from templates.solicitar_emprestimoUI import Solicitar_Emprestimo_usuario_UI
-# from templates.grafico_livrosUI import Livros_pelo_Genero_UI
+from templates.grafico_livrosUI import Livros_pelo_Genero_UI
 from templates.criar_contaUI import Criar_ContaUI
 from templates.loginUI import LoginUI
 from templates.visualizar_reservas_admUI import Reserva_Adm_UI
@@ -34,7 +34,7 @@ class IndexUI:
         if op == "Livros Disponíveis": Livros_Disponiveis_UI.main()
         if op == "Solicitar Empréstimo": Solicitar_Emprestimo_usuario_UI.main()
         # if op == "Minhas Reservas": Minhas_Reservas_UI.main()
-        # if op == "Gráfico de livros pelo gênero": Livros_pelo_Genero_UI.main()
+        if op == "Gráfico de livros pelo gênero": Livros_pelo_Genero_UI.main()
 
     def sair_do_sistema():
         if st.sidebar.button("Sair"):

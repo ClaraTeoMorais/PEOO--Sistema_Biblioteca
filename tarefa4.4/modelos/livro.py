@@ -16,7 +16,6 @@ class Livro:
 
 
     # GETs E SETs
-    #Lembrar de ver como colocar o id genero
 
     def set_id(self, g):
         self.__id = g
