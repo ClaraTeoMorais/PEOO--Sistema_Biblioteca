@@ -23,11 +23,15 @@ class Manter_Emprestimo_UI:
         dados = []
         for obj in emprestimos:
             livro_obj = Livros.listar_id(obj.get_idLivro())
+            usuario_obj = View.usuario_listar_id(obj.get_idUsuario())
+            
             nome_livro = livro_obj.get_livro() if livro_obj else "Livro não encontrado"
+            nome_usuario = usuario_obj.get_nome() if usuario_obj else "Usuário não encontrado"
+            
             dados.append({
                 "ID": obj.get_id(),
                 "Livro": nome_livro,
-                "Usuário": obj.get_idUsuario(),
+                "Usuário": nome_usuario,
                 "Reserva": obj.get_reserva(),
                 "Data Empréstimo": obj.get_data_emprestimo(),
                 "Data Devolução": obj.get_data_devolucao()
@@ -71,18 +75,25 @@ class Manter_Emprestimo_UI:
                 except Exception as e:
                     st.error(f"Erro ao inserir empréstimo: {e}")
 
+    def formatar_emprestimo(emprestimo):
+        livro_obj = Livros.listar_id(emprestimo.get_idLivro())
+        usuario_obj = View.usuario_listar_id(emprestimo.get_idUsuario())
+        
+        nome_livro = livro_obj.get_livro() if livro_obj else "Livro não encontrado"
+        nome_usuario = usuario_obj.get_nome() if usuario_obj else "Usuário não encontrado"
+        
+        return f"{emprestimo.get_id()} - {nome_livro} - {nome_usuario}"
+
     def atualizar():
         emprestimos = View.emprestimo_listar()
         if not emprestimos:
             st.write("Nenhum empréstimo cadastrado")
             return
 
-        op = st.selectbox("Selecione o empréstimo para atualizar", emprestimos, format_func=lambda x: f"{x.get_id()} - {x.get_idLivro()} - {x.get_idUsuario()}" )
+        op = st.selectbox("Selecione o empréstimo para atualizar", emprestimos, format_func=Manter_Emprestimo_UI.formatar_emprestimo)
 
         nova_data_devolucao = datetime.combine(st.date_input("Nova data de devolução", datetime.today() + timedelta(days=7)), datetime.min.time())
         reserva = st.checkbox("Confirmação de reserva")
-
-        #O combine serve para adicionar um horário
 
         if st.button("Atualizar"):
             try:
@@ -100,14 +111,13 @@ class Manter_Emprestimo_UI:
             except Exception as e:
                 st.error(f"Erro ao atualizar empréstimo: {e}")
 
-
     def excluir():
         emprestimos = View.emprestimo_listar()
         if not emprestimos:
             st.write("Nenhum empréstimo cadastrado")
             return
 
-        op = st.selectbox("Selecione o empréstimo para excluir", emprestimos, format_func=lambda x: f"{x.get_id()} - {x.get_idLivro()} - {x.get_idUsuario()}" )
+        op = st.selectbox("Selecione o empréstimo para excluir", emprestimos, format_func=Manter_Emprestimo_UI.formatar_emprestimo)
 
         if st.button("Excluir"):
             try:
@@ -117,3 +127,10 @@ class Manter_Emprestimo_UI:
                 st.rerun()
             except Exception as e:
                 st.error(f"Erro ao excluir empréstimo: {e}")
+
+def usuario_listar_id(id_usuario):
+    usuarios = View.usuario_listar()
+    for usuario in usuarios:
+        if usuario.get_id() == id_usuario:
+            return usuario
+    return None
