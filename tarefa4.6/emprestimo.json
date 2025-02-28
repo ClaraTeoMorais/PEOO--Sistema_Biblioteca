@@ -1,20 +1,11 @@
 [
     {
-        "id": 2,
-        "idLivro": 5,
+        "id": 1,
+        "idLivro": 2,
         "idUsuario": 3,
-        "reserva": false,
-        "data_emprestimo": "28/02/2025 02:54",
-        "data_devolucao": "07/03/2025 02:54",
-        "devolucao": false
-    },
-    {
-        "id": 3,
-        "idLivro": 3,
-        "idUsuario": 2,
-        "reserva": false,
-        "data_emprestimo": "28/02/2025 02:56",
-        "data_devolucao": "07/03/2025 02:56",
+        "reserva": true,
+        "data_emprestimo": "28/02/2025 09:29",
+        "data_devolucao": "07/03/2025 00:00",
         "devolucao": false
     }
 ]
